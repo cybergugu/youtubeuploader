@@ -127,7 +127,7 @@ func main() {
 	quitChan := make(chanChan)
 	go p.Progress(quitChan, signalChan)
 
-	client, err := buildOAuthHTTPClient(ctx, []string{youtube.YoutubeUploadScope, youtube.YoutubepartnerScope, youtube.YoutubeScope})
+	client, err := buildOAuthHTTPClient(ctx, []string{youtube.YoutubeUploadScope,  youtube.YoutubeScope})
 	if err != nil {
 		log.Fatalf("Error building OAuth client: %v", err)
 	}
